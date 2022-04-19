@@ -16,6 +16,9 @@ my_fruit_lits = my_fruit_lits.set_index('Fruit')
 
 # Let's put a pick list here so they can pick the fruit they want to include
 fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_lits.index),['Avocado', 'Strawberries'])
+
+# If you want to know more about pandas.dataframe.loc[ ], you find more information here: 
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html 
 fruits_to_show = my_fruit_lits.loc[fruits_selected]
 
 # display the table on the page
